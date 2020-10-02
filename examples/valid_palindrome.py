@@ -5,6 +5,5 @@ import re
 
 
 def solution(s: str) -> bool:
-    s = s.lower()                       #str.lower() : 대문자를 포함한 string을 소문자로 바꾸는 함수
-    s = re.sub('[^a-z0-9]', '', s)      #re.sub() 함수는 문자열에서 매치된 텍스트를 다른 텍스트로 치환할 때 사용
-    return s == s[::-1]                 #문자열슬라이싱
+    s = re.sub('[^a-z0-9]', '', s.lower())      #re.sub() 함수는 문자열에서 매치된 텍스트를 다른 텍스트로 치환할 때 사용
+    return s == s[::-1]                         #문자열슬라이싱
